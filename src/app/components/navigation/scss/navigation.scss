@@ -1,0 +1,118 @@
+@use './utilities';
+@use './animations';
+
+@use './../../../../colors.scss' as color;
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0px 40px;
+    border-bottom: 2px solid color.$border-primary;
+    background-color: color.$bg-primary;
+    color: color.$font-secondary;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+
+        &--logo {
+            height: 32px;
+            cursor: pointer;
+            padding: 16px 0px;
+        }
+
+        &--selection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        &--option {
+            padding: 0px 12px;
+            display: flex;
+            align-items: center;
+            height: 64px;
+            color: color.$font-primary;
+            font-size: 16px;
+            transition: 400ms;
+
+            &:hover {
+                cursor: pointer;
+                color: color.$font-secondary;
+            }
+        }
+        
+        &--btn {
+            display: none;
+            cursor: pointer;
+            height: 36px;
+            width: 36px;
+            gap: 6px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 400ms;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 48px;
+        
+        &--option {
+            padding: 6px 12px;
+            height: 48px;
+            width: 300px;
+            font-size: 16px;
+            color: color.$font-primary;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                transition: color 300ms ease;
+                color: color.$font-secondary;
+            }
+        }
+
+        &--special-option {
+            height: 64px;
+            width: 300px;
+            color: color.$font-primary;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .navigation {
+        padding: 0px 18px;
+        
+        &__bar {
+            &--selection {
+                display: none;
+            }
+
+            &--btn {
+                display: flex;
+            }
+        }
+    }
+}
