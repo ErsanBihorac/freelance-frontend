@@ -1,7 +1,9 @@
+@use './fonts.scss' as font;
+
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/primary/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
+  src: url('/fonts/primary/Inter.ttf');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -9,15 +11,13 @@
 @font-face {
   font-family: 'Instrument-Serif';
   src: url('/fonts/secondary/InstrumentSerif-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-$font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-$font-secondary: 'Instrument-Serif', system-ui, sans-serif;
-
 html, body {
-  font-family: $font-primary;
+  font-family: font.$font-primary;
   margin: 0;
+  background-color: black;
 }

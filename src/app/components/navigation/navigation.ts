@@ -9,7 +9,6 @@ import { FancyBtn } from "../fancy-btn/fancy-btn";
   styleUrl: './scss/navigation.scss',
 })
 export class Navigation {
-  animation: boolean = false;
   navigationOpen: boolean = false;
   animationsEnabled: boolean = false;
   
@@ -20,11 +19,9 @@ export class Navigation {
   }
 
   toggleAnimation(){
-    if (this.animation == false) {
-      this.animation = true;
+    if (this.navigationOpen == false) {
       this.navigationOpen = true;
     } else {
-      this.animation = false;
       this.navigationOpen = false;
     }
   }

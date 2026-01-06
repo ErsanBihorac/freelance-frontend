@@ -13,9 +13,9 @@
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .show {
@@ -24,4 +24,5 @@
 
 .hide {
     opacity: 0;
+    pointer-events: none;
 }
