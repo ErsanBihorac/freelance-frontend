@@ -1,4 +1,5 @@
-@use './fonts.scss' as font;
+@use './app/styles/fonts' as font;
+@use './app/styles/colors' as color;
 
 @font-face {
   font-family: 'Inter';

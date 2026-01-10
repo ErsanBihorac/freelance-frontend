@@ -1,7 +1,7 @@
 @use './utilities';
 @use './animations';
 
-@use './../../../../colors.scss' as color;
+@use './../../../styles/colors' as color;
 
 .wrapper {
     width: 100%;

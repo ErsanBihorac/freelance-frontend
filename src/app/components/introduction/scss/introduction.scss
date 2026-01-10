@@ -1,9 +1,9 @@
 @use './animations.components' as animation;
-@use './animations.keyframes' as keyframe;
+@use './../../../styles/animations.keyframes' as keyframe;
 @use './variables.animations' as var;
 
-@use './../../../../colors.scss' as color;
-@use './../../../../fonts.scss' as font;
+@use './../../../styles/colors' as color;
+@use './../../../styles/fonts' as font;
 
 .intro {
     padding: 240px 20px 180px;
