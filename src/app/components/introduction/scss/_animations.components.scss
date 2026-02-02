@@ -1,6 +1,7 @@
 @use './variables.animations' as var;
 @use './../../../styles/colors' as color;
 @use './../../../styles/animations.mixins'as mixin;
+@use './../../../styles/animations.keyframes' as keyframe;
 
 @for $i from 1 through 3 {
   .title-animation-#{$i} {

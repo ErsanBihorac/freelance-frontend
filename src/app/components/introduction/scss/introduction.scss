@@ -159,16 +159,41 @@
 
     &__paragraph-socials {
         display: flex;
-        gap: 64px;
+        gap: 40px;
+        padding-left: 16px;
+        height: 24px;
         justify-content: flex-start;
-        
-        img {
-            cursor: pointer;
-            color: white;
-            padding: 8px;
-            height: 24px;
-            width: 24px;
+        align-items: center;
+    }
+
+    &__linkedin-icon {
+        width: 18px;
+        height: 18px;
+        fill: color.$font-primary;
+        transition: fill 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            fill: color.$font-secondary;
         }
+    }
+
+    &__mail-icon {
+        width: 22px;
+        height: 22px;
+        fill: color.$font-primary;
+        transition: fill 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            fill: color.$font-secondary;
+        }
+    }
+
+    &__icon-line {
+        height: 100%;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.1);
     }
 
     &__visual {

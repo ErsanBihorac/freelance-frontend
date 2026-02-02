@@ -48,8 +48,11 @@
     }
 
     @media (max-width: 800px) {
-        align-items: flex-start;
         padding: 100px 18px;
+    }
+
+    @media (max-width: 680px) {
+        align-items: flex-start;;
     }
 
     &__right-part {
