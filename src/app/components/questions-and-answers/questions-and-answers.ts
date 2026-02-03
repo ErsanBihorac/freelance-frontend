@@ -31,12 +31,12 @@ export class QuestionsAndAnswers implements AfterViewInit {
       answer: "In Bremen liegt Hamburg",
       active: false
     }
-  ]
+  ];
   
   @ViewChild('leftPart') leftPart!: ElementRef;
   wasViewed = false;
 
-    ngAfterViewInit() {
+  ngAfterViewInit() {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         this.wasViewed = true;
