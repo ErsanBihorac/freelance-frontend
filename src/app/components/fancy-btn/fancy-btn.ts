@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-fancy-btn',
   imports: [CommonModule],
   templateUrl: './fancy-btn.html',
-  styleUrl: './fancy-btn.scss',
+  styleUrl: './scss/fancy-btn.scss',
 })
 export class FancyBtn {
   @Input() text: string = '';

@@ -1,6 +1,6 @@
-@use './animations.components' as animation;
+@use './../../../styles/animations.component' as animation;
 @use './../../../styles/animations.keyframes' as keyframe;
-@use './variables.animations' as var;
+@use './../../../styles/variables.animations' as var;
 
 @use './../../../styles/colors' as color;
 @use './../../../styles/fonts' as font;

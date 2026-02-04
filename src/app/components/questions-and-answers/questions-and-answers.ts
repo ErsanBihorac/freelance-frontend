@@ -40,7 +40,6 @@ export class QuestionsAndAnswers implements AfterViewInit {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         this.wasViewed = true;
-        console.log("seen");
         observer.disconnect();
       }
     });

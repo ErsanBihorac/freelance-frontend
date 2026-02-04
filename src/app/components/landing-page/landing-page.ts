@@ -4,10 +4,11 @@ import { Introduction } from "../introduction/introduction";
 import { QuestionsAndAnswers } from "../questions-and-answers/questions-and-answers";
 import { Contact } from "../contact/contact";
 import { MovingBanner } from "../moving-banner/moving-banner";
+import { Footer } from "../footer/footer";
 
 @Component({
   selector: 'app-landing-page',
-  imports: [Navigation, Introduction, QuestionsAndAnswers, Contact, MovingBanner],
+  imports: [Navigation, Introduction, QuestionsAndAnswers, Contact, MovingBanner, Footer],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })

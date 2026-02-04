@@ -15,7 +15,7 @@ interface Firefly {
   selector: 'app-fireflies',
   imports: [CommonModule],
   templateUrl: './fireflies.html',
-  styleUrl: './fireflies.scss',
+  styleUrl: './scss/fireflies.scss',
 })
 export class Fireflies implements OnInit {
   fireflies: Firefly[] = [];
