@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QNACard } from "../q-n-a-card/q-n-a-card";
 import { GlowingBtn } from "../glowing-btn/glowing-btn";
+import { Button } from '../../interfaces/button.interface';
 
 @Component({
   selector: 'app-questions-and-answers',
@@ -10,6 +11,14 @@ import { GlowingBtn } from "../glowing-btn/glowing-btn";
   styleUrl: './scss/questions-and-answers.scss',
 })
 export class QuestionsAndAnswers implements AfterViewInit {
+    glowingBtn: Button = {
+    text: 'Contact Us',
+    svg: {
+      viewBox: '0 -960 960 960',
+      path: 'm216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z',
+    },
+  };
+  
   questionAndAnswers = [
     {
       question: "Wo ist Duisburg?",

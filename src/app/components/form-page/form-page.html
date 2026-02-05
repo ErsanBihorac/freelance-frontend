@@ -1,0 +1,59 @@
+<app-navigation></app-navigation>
+
+<section class="wrapper">
+  <div class="text fade-in-up-animation">
+    <div class="text__title section-animation-1">
+      <span>Get </span>
+      <span>in touch </span>
+      <span class="text__title--highlight">Now</span>
+    </div>
+
+    <div class="text__description section-animation-2">
+      <span
+        >Find the answers to our most common questions here,
+      </span>
+      <span>but if you still need help, </span>
+      <span>feel free to contact me.</span>
+    </div>
+  </div>
+
+  <form class="form fade-in-up-animation">
+    <div class="form__first-row">
+      <div class="form__input-pair">
+        <span class="form__input-title">NAME</span>
+        <input class="form__input" type="text" placeholder="Your Name" />
+      </div>
+      <div class="form__input-pair">
+        <span class="form__input-title">EMAIL</span>
+        <input class="form__input" type="text" placeholder="Your Email" />
+      </div>
+    </div>
+
+    <div class="form__input-pair">
+      <span class="form__input-title">WEBSITE (optional)</span>
+      <input class="form__input" type="text" placeholder="Company Website" />
+    </div>
+
+    <div class="form__input-pair">
+      <span class="form__input-title">MESSAGE</span>
+      <textarea class="form__textarea" type="text" placeholder="Your Message"></textarea>
+    </div>
+
+    <app-glowing-btn
+      class="form__btn"
+      [button]="glowingBtn"
+      bgColor="#060707"
+      size="large"
+      height="36px"
+      width="200px"
+    ></app-glowing-btn>
+
+    <div class="form__subhead">
+      <span class="form__subhead-notice">(We reach out to you within 24hrs)</span>
+      <span class="form__subhead-email">meine-businessmail@dev.de</span>
+    </div>
+  </form>
+</section>
+
+<app-contact></app-contact>
+<app-footer></app-footer>

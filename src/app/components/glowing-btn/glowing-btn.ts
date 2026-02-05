@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Button } from '../../interfaces/button.interface';
 
 @Component({
   selector: 'app-glowing-btn',
@@ -8,5 +9,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './scss/glowing-btn.scss',
 })
 export class GlowingBtn {
-  @Input() text: string = '';
+  @Input({required: true}) button!: Button
+  @Input({required: false}) bgColor!: string
+  @Input({required: true}) height!: string
+  @Input({required: true}) width!: string
+  @Input({required: true}) size!: 'medium' | 'large';
 }

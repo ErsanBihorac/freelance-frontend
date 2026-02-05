@@ -39,8 +39,24 @@
   pointer-events: none;
 }
 
+.animated-border-base-medium {
+  @include border-base(164px, 44px);
+}
+
+.animated-border-base-large {
+  @include border-base(204px, 44px);
+}
+
+.border-base-medium {
+  @include border-base(160px, 40px);
+}
+
+.border-base-large {
+  @include border-base(200px, 40px);
+}
+
+
 .glowing-border {
-  @include border-base(164px, 40px);
   z-index: -3;
   filter: blur(6px);
 
@@ -61,7 +77,6 @@
 }
 
 .animated-border {
-  @include border-base(164px, 40px);
   z-index: -2;
 
   &::before,
@@ -96,12 +111,6 @@
 }
 
 .dark-border {
-  @include border-base(160px, 36px);
   z-index: -1;
-  background-color: color.$bg-secondary;
-}
-
-.w160 {
-  width: 160px;
-  height: 36px;
+  // background-color: color.$bg-secondary;
 }

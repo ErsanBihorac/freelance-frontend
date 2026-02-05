@@ -64,6 +64,10 @@
   @include mixin.fade(fadeInUp, 400ms, 1000ms);
 }
 
+.fade-in-up-animation {
+  @include mixin.fade(fadeInUp, 400ms, 400ms);
+}
+
 .next-animation {
   @include mixin.fade(fadeIn, 600ms, 500ms);
 }
