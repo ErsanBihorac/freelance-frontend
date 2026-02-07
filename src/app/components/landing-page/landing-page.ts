@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { Navigation } from "../navigation/navigation";
-import { Introduction } from "../introduction/introduction";
-import { QuestionsAndAnswers } from "../questions-and-answers/questions-and-answers";
-import { Contact } from "../contact/contact";
-import { MovingBanner } from "../moving-banner/moving-banner";
-import { Footer } from "../footer/footer";
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Navigation } from '../navigation/navigation';
+import { Introduction } from '../introduction/introduction';
+import { QuestionsAndAnswers } from '../questions-and-answers/questions-and-answers';
+import { Contact } from '../contact/contact';
+import { MovingBanner } from '../moving-banner/moving-banner';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-landing-page',
@@ -102,4 +102,12 @@ export class LandingPage {
       },
     },
   ];
+
+  @ViewChild('qnaSection', { read: ElementRef }) qnaSection!: ElementRef;
+
+  handleChildEvent() {
+    if (this.qnaSection) {
+      this.qnaSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

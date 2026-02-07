@@ -4,13 +4,13 @@
         'close-nav': animationsEnabled && !navigationOpen
     }">
         <div class="navigation__bar">
-            <img src="img/logo-colored.svg" alt="logo" class="navigation__bar--logo">
+            <img routerLink="/" src="img/signature-logo-transparent.png" alt="logo" class="navigation__bar--logo">
 
             <div class="navigation__bar--selection">
-                <span class="navigation__bar--option">Projects</span>
-                <span class="navigation__bar--option">Services</span>
-                <span class="navigation__bar--option">Contact</span>
-                <app-fancy-btn [text]="'buy template'"></app-fancy-btn>
+                <span routerLink="/" class="navigation__bar--option">About me</span>
+                <span (click)="navigateToQna()" class="navigation__bar--option">QnA</span>
+                <span routerLink="/projects" class="navigation__bar--option">Projects</span>
+                <app-fancy-btn routerLink="/contact" [text]="'Contact me'"></app-fancy-btn>
             </div>
 
             <div class="navigation__bar--btn" (click)="openMenu()">
@@ -20,16 +20,16 @@
         </div>
 
         <div class="navigation__menu" [ngClass]="navigationOpen ? 'show' : 'hide'">
-            <div class="navigation__menu--option td-150"  [ngClass]="navigationOpen ? 'show' : 'hide'">
+            <div routerLink="/" class="navigation__menu--option td-150"  [ngClass]="navigationOpen ? 'show' : 'hide'">
+                About me
+            </div>
+            <div (click)="navigateToQna()" class="navigation__menu--option td-200"  [ngClass]="navigationOpen ? 'show' : 'hide'">
+                QnA
+            </div>
+            <div routerLink="/projects"  class="navigation__menu--option td-250"  [ngClass]="navigationOpen ? 'show' : 'hide'">
                 Projects
             </div>
-            <div class="navigation__menu--option td-200"  [ngClass]="navigationOpen ? 'show' : 'hide'">
-                Services
-            </div>
-            <div class="navigation__menu--option td-250"  [ngClass]="navigationOpen ? 'show' : 'hide'">
-                Contact
-            </div>
-            <app-fancy-btn class="navigation__menu--special-option td-300" [ngClass]="navigationOpen ? 'show' : 'hide'" [text]="'buy template'"></app-fancy-btn>
+            <app-fancy-btn routerLink="/contact" class="navigation__menu--special-option td-300" [ngClass]="navigationOpen ? 'show' : 'hide'" [text]="'Contact Me'"></app-fancy-btn>
         </div>
     </Section>
 </div>

@@ -10,9 +10,9 @@
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   position: relative;
-  cursor: pointer;
+  cursor: default;
   z-index: 1;
   background: linear-gradient(to top left, color.$bg-primary 0%, color.$bg-primary 150%);
 
@@ -34,6 +34,13 @@
     mask-composite: exclude;
 
     pointer-events: none;
+  }
+
+  &__error-message {
+    color: color.$font-secondary;
+    font-size: 12px;
+    position: absolute;
+    bottom: -19px;
   }
 
   &__subhead {
@@ -60,6 +67,7 @@
   &__btn {
     display: flex;
     justify-content: center;
+    cursor: default;
   }
 
   &__first-row {
@@ -79,6 +87,7 @@
     gap: 6px;
     width: 100%;
     max-width: 100%;
+    position: relative;
   }
 
   &__input-title {
@@ -127,7 +136,7 @@
   justify-content: center;
   gap: 44px;
   padding: 160px 40px;
-padding-bottom: 0px;
+  padding-bottom: 0px;
   align-items: center;
 }
 

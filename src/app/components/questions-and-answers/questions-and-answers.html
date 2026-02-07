@@ -8,13 +8,13 @@
             </div>
 
             <div class="q-n-a__description">
-                <span class="description-animation-1">Find the answers to our most common</span>
+                <span class="description-animation-1">Find the answers to most common </span>
                 <span class="description-animation-2">questions here, but if you still need help, </span>
                 <span class="description-animation-3">feel free to contact me.</span>
             </div>
         </div>
 
-        <app-glowing-btn class="button-animation" [button]="glowingBtn" size="medium" height="36px" width="160px"></app-glowing-btn>
+        <app-glowing-btn (click)="navigateToContact()" class="button-animation" [button]="glowingBtn" size="medium" height="36px" width="160px"></app-glowing-btn>
     </div>
 
     <div class="q-n-a__right-part cards-animation">

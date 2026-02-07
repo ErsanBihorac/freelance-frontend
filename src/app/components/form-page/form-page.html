@@ -9,48 +9,89 @@
     </div>
 
     <div class="text__description section-animation-2">
-      <span
-        >Find the answers to our most common questions here,
-      </span>
+      <span>Find the answers to our most common questions here, </span>
       <span>but if you still need help, </span>
       <span>feel free to contact me.</span>
     </div>
   </div>
 
-  <form class="form fade-in-up-animation">
+  <form #myForm="ngForm" class="form fade-in-up-animation">
     <div class="form__first-row">
       <div class="form__input-pair">
         <span class="form__input-title">NAME</span>
-        <input class="form__input" type="text" placeholder="Your Name" />
+        <input
+          required
+          #nameInput="ngModel"
+          [(ngModel)]="name"
+          name="name"
+          class="form__input"
+          type="text"
+          placeholder="Your Name"
+        />
+        <span *ngIf="nameInput.invalid && nameInput.touched" class="form__error-message"
+          >name is required</span
+        >
       </div>
       <div class="form__input-pair">
         <span class="form__input-title">EMAIL</span>
-        <input class="form__input" type="text" placeholder="Your Email" />
+        <input
+          required
+          #emailInput="ngModel"
+          [(ngModel)]="email"
+          pattern="^[A-Za-z0-9._%+]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+          name="email"
+          class="form__input"
+          type="email"
+          placeholder="Your Email"
+        />
+        <span *ngIf="emailInput.invalid && emailInput.touched" class="form__error-message"
+          >valid email is required</span
+        >
       </div>
     </div>
 
     <div class="form__input-pair">
       <span class="form__input-title">WEBSITE (optional)</span>
-      <input class="form__input" type="text" placeholder="Company Website" />
+      <input
+        #websiteInput="ngModel"
+        [(ngModel)]="website"
+        name="website"
+        class="form__input"
+        type="text"
+        placeholder="Company Website"
+      />
     </div>
 
     <div class="form__input-pair">
       <span class="form__input-title">MESSAGE</span>
-      <textarea class="form__textarea" type="text" placeholder="Your Message"></textarea>
+      <textarea
+        required
+        #messageInput="ngModel"
+        [(ngModel)]="message"
+        name="message"
+        class="form__textarea"
+        type="text"
+        placeholder="Your Message"
+      ></textarea>
+      <span *ngIf="messageInput.invalid && messageInput.touched" class="form__error-message"
+        >message is required</span
+      >
     </div>
 
-    <app-glowing-btn
-      class="form__btn"
-      [button]="glowingBtn"
-      bgColor="#060707"
-      size="large"
-      height="36px"
-      width="200px"
-    ></app-glowing-btn>
+    <div class="form__btn">
+      <app-glowing-btn
+        (click)="submit(myForm)"
+        [button]="glowingBtn"
+        [bgColor]="buttonBgColor"
+        size="large"
+        height="36px"
+        width="200px"
+      ></app-glowing-btn>
+    </div>
 
     <div class="form__subhead">
       <span class="form__subhead-notice">(We reach out to you within 24hrs)</span>
-      <span class="form__subhead-email">meine-businessmail@dev.de</span>
+      <span class="form__subhead-email">contact@ersan-bihorac.de</span>
     </div>
   </form>
 </section>
