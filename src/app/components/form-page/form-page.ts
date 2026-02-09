@@ -71,6 +71,7 @@ export class FormPage {
     this.glowingBtn.text = 'Sending failed!';
     this.cdr.detectChanges();
   }
+  
   openMail() {
     const subject = encodeURIComponent('Contact via Website');
     const body = encodeURIComponent('Hi,\n\n ...');
