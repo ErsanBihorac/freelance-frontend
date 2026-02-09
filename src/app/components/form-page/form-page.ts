@@ -26,7 +26,8 @@ export class FormPage {
       path: 'm216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z',
     },
   };
-
+  
+  mail: string = 'contact@ersan-bihorac.de';
   buttonBgColor: string = '';
   name: string = '';
   email: string = '';
@@ -69,5 +70,11 @@ export class FormPage {
   submitFailed() {
     this.glowingBtn.text = 'Sending failed!';
     this.cdr.detectChanges();
+  }
+  openMail() {
+    const subject = encodeURIComponent('Contact via Website');
+    const body = encodeURIComponent('Hi,\n\n ...');
+
+    window.location.href = `mailto:${this.mail}?subject=${subject}&body=${body}`;
   }
 }
