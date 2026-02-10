@@ -27,7 +27,7 @@ export class FormPage {
     },
   };
   
-  mail: string = 'contact@ersan-bihorac.de';
+  mail: string = 'contact@ebihorac.de';
   buttonBgColor: string = '';
   name: string = '';
   email: string = '';

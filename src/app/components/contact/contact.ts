@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 export class Contact {
   linkedin: string = 'https://www.linkedin.com/in/ersan-bihorac/';
   github: string = 'https://github.com/ErsanBihorac';
-  mail: string = 'contact@ersan-bihorac.de';
+  mail: string = 'contact@ebihorac.de';
 
   glowingBtn: Button = {
     text: 'Contact Me',
