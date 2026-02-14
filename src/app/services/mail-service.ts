@@ -15,6 +15,8 @@ export class MailService {
 
     const body: email = { name, email, message };
     if (website) body.website = website;
-    return this.http.post(url, body);
+    return this.http.post(url, body, {
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
